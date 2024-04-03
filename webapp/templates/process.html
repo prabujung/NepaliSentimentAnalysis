@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Processing</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='./style2.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="first">
+        <div class="entered_text">Input Sentence</div>
+        <div class="output-box">{{sentence}}</div>
+        <div class="divider">↓</div>
+        <div class="clean">Cleaned Sentence</div>
+        <div class="output-box">{{cleaned}}</div>
+        
+        <div class="divider">↓</div>
+        <div class="card">
+          <h3>Tokenized Sentences</h3>
+          <div class="card-content">{{token}}</div>
+        </div>
+        <div class="divider">↓</div>
+        <div class="clean">Sentence after stop word removal</div>
+        <div class="output-box">{{stop_word_removed}}</div>
+        <div class="card">
+          <h3>Removed Stop Words</h3>
+          <div class="card-content">{{stop_words}}</div>
+        </div>
+        <div class="divider">↓</div>
+        <div class="card">
+          <h3>Tf-IDF Values</h3>
+          <div class="card-content">{{tf_idf}}</div>
+        </div>
+        <div class="clean">Prediction</div>
+        <div class="card"><div class="card-content">{{sentiment}}</div></div>
+      </div>
+      <div class="second">
+        <div class="card-2">
+          <h3>F1-Score</h3>
+          <div class="card-content">F1-Score</div>
+        </div>
+        <div class="card-2">
+          <h3>Accuracy</h3>
+          <div class="card-content">Accuracy</div>
+        </div>
+        <div class="card-2">
+          <h3>Precision</h3>
+          <div class="card-content">Precision</div>
+        </div>
+      </div>
+      <div class="third">
+        <div class="btn3"><a href="{{url_for('predict')}}">Go Back</a></div>
+      </div>
+    </div>
+  </body>
+</html>

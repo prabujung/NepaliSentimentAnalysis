@@ -1,0 +1,125 @@
+body {
+  background-color: black;
+  font-family: Mattone, sans-serif;
+}
+
+.hero {
+  position: fixed;
+  background: url(./images/bg-first.webp) no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+}
+.content {
+  color: #fff;
+  font-size: 80px;
+}
+.radial {
+  transform: rotate(180deg);
+  z-index: -1;
+  flex-shrink: 0;
+  border-radius: 100%;
+  opacity: 0.4;
+  mix-blend-mode: luminosity;
+  rotate: 180deg;
+  background: radial-gradient(
+    60.42% 60.42% at 50.02% 60.42%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 69.42%,
+    rgba(255, 255, 255, 0.08) 75.33%,
+    rgba(255, 255, 255, 0.13) 80.42%,
+    rgba(255, 255, 255, 0.31) 86.39%,
+    rgba(255, 255, 255, 0.57) 92.19%,
+    #fff 100%
+  );
+  box-shadow: 0px -20px 40px 0px rgba(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 150vh;
+  position: absolute;
+  top: 250;
+  left: 0;
+}
+.input {
+  height: 50px;
+  width: 25%;
+  border-radius: 35px;
+  background: rgba(255, 252, 252, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 50px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  position: relative;
+  width: 70%;
+  padding: 10px;
+}
+.btn {
+  z-index: 20;
+  border-radius: 56px;
+  width: 113px;
+  height: 41px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: hsla(0, 0%, 100%, 0.2);
+  color: #fff;
+}
+.small-star {
+  height: 50px;
+  padding-left: 5px;
+}
+.result {
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.result h2{
+  font-size: 80px;
+  margin-top: -40px;
+}
+.btn3{
+  z-index: 20;
+  border-radius: 56px;
+  width: 250px;
+  height: 41px;
+  background-color: white;
+  border-color: hsla(0, 0%, 100%, 0.2);
+  margin-top: -100px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: darkblue;
+}

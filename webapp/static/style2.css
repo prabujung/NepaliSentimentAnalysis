@@ -1,0 +1,131 @@
+body {
+  background-color: black;
+  font-family: Mattone, sans-serif;
+  overflow: scroll;
+}
+.main {
+  position: fixed;
+  background: url(./images/bg-first.webp) no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.first {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.entered_text {
+  font-size: 30px;
+}
+.divider {
+  font-size: 60px;
+}
+.clean {
+  font-size: 30px;
+  text-align: center;
+}
+.output-box {
+  height: 50px;
+  border-radius: 5px;
+  width: 50%;
+  border: solid;
+
+  background: rgba(255, 252, 252, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 20px;
+}
+.card {
+  width: 50%;
+  height: 100px;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent white background */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Applies a blur effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+  transition: all 0.3s ease; /* Smooth transition */
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px); /* Adds a slight lift effect on hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+.card-content {
+  height: 50%;
+  display: flex;
+}
+.second {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 1000px;
+  justify-content: space-between;
+}
+.card-2 {
+  width: 50%;
+  height: 250px;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent white background */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Applies a blur effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+  transition: all 0.3s ease; /* Smooth transition */
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+.card-2:hover {
+  transform: translateY(-5px); /* Adds a slight lift effect on hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+.third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.btn3 {
+  border-radius: 56px;
+  width: 150px;
+  height: 41px;
+  background-color: white;
+  border-color: hsla(0, 0%, 100%, 0.2);
+  margin-top: -100px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: darkblue;
+}

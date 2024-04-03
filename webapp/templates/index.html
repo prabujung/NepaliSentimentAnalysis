@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="content">Sentiment Analysis</div>
+      <div class="radial"></div>
+      <div class="input">
+        <img class="small-star" src="../static/images/small-star.webp" />
+        <form action="/predict" method="post">
+          <input
+            id="sentence"
+            class="box"
+            type="text"
+            name="sentence"
+            placeholder="Enter your text here"
+          />
+          <button class="btn" type="submit">Analyse</button>
+        </form>
+      </div>
+      <div class="result">
+        <!-- <h1>Result</h1> -->
+        <h2>{{sentiment}}</h2>
+      </div>
+      <div class="btn3">
+        <a
+          href="{{url_for('process',cleaned=cleaned,
+            token=token,
+            stop_word_removed=stop_word_removed,
+            sentiment=sentiment,
+            sentence = sentence,
+            tf_idf = tf_idf,
+            stop_words = stop_words,
+            )}}"
+          >Click to see the process</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
