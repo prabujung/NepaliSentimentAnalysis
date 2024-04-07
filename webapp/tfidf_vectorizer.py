@@ -11,8 +11,11 @@ class TFIDFVectorizer:
     def get_tf_idf_info(self,words,sentence_feature):
         tf_idf_info = {}
         for word in words:
-            index = self.vocabulary.index(word)
-            tf_idf_info[word]=sentence_feature[0][index]
+            if word not in self.vocabulary:
+                tf_idf_info[word]=0
+            else:
+                index = self.vocabulary.index(word)
+                tf_idf_info[word]=sentence_feature[0][index]
         return tf_idf_info
     
     def fit_transform(self, corpus):
