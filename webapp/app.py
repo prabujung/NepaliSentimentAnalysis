@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, request
 import pickle
 import re
@@ -100,19 +101,33 @@ def predict():
 
 
 @app.route(
-    "/process/<sentence>/<cleaned>/<token>/<stop_word_removed>/<sentiment>/<tf_idf>/<stop_words>", methods=["GET"]
+    "/process/<sentence>", methods=["GET"]
 )
-def process(sentence, cleaned, token, stop_word_removed, sentiment, tf_idf, stop_words):
+def process(sentence):
     if request.method == "GET":
+        (
+            cleaned_sentence,
+            tokenized_sentence,
+            stop_word_removed,
+            stop_words,
+            tf_idf,
+            predicted_sentiment,
+        ) = predict_sentiment(sentence)
+
+        if predicted_sentiment == 1:
+            sentiment_label = "Positive"
+        elif predicted_sentiment == -1:
+            sentiment_label = "Negative"
+        else:
+            sentiment_label = "Neutral"
         # sentence = request.form["sentence"]
         # cleaned_sentence,tokenized_sentence,stop_word_removed,predicted_sentiment = predict_sentiment(sentence)
-
         return render_template(
             "process.html",
-            cleaned=cleaned,
-            token=token,
+            cleaned=cleaned_sentence,
+            token=tokenized_sentence,
             stop_word_removed=stop_word_removed,
-            sentiment=sentiment,
+            sentiment=sentiment_label,
             sentence=sentence,
             tf_idf=tf_idf,
             stop_words=stop_words,

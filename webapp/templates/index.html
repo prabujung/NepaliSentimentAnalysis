@@ -3,7 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sentiment Analysis</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='./style.css') }}"
+    />
   </head>
   <body>
     <div class="hero">
@@ -28,13 +31,8 @@
       </div>
       <div class="btn3">
         <a
-          href="{{url_for('process',cleaned=cleaned,
-            token=token,
-            stop_word_removed=stop_word_removed,
-            sentiment=sentiment,
+          href="{{url_for('process',
             sentence = sentence,
-            tf_idf = tf_idf,
-            stop_words = stop_words,
             )}}"
           >Click to see the process</a
         >

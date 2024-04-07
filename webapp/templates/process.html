@@ -16,10 +16,10 @@
         <div class="divider">↓</div>
         <div class="clean">Cleaned Sentence</div>
         <div class="output-box">{{cleaned}}</div>
-        
+
         <div class="divider">↓</div>
+        <div class="clean">Tokenized Sentence</div>
         <div class="card">
-          <h3>Tokenized Sentences</h3>
           <div class="card-content">{{token}}</div>
         </div>
         <div class="divider">↓</div>
@@ -30,28 +30,33 @@
           <div class="card-content">{{stop_words}}</div>
         </div>
         <div class="divider">↓</div>
-        <div class="card">
-          <h3>Tf-IDF Values</h3>
-          <div class="card-content">{{tf_idf}}</div>
+        <h1>TFIDF Values</h1>
+        <div class="table-box">
+          <div class="table-row table-head">
+            <div class="table-cell first-cell">
+              <p>Words</p>
+            </div>
+            <div class="table-cell last-cell">
+              <p>Values</p>
+            </div>
+          </div>
+          {% for key,value in tf_idf.items() %}
+          <div class="table-row">
+            <div class="table-cell first-cell">
+              <p>{{ key }}</p>
+            </div>
+            <div class="table-cell last-cell">
+              <p>{{ value }}</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
+
         <div class="clean">Prediction</div>
-        <div class="card"><div class="card-content">{{sentiment}}</div></div>
+        <div class="card"><div class="sentiment">{{sentiment}}</div></div>
       </div>
+
       <div class="second">
-        <div class="card-2">
-          <h3>F1-Score</h3>
-          <div class="card-content">F1-Score</div>
-        </div>
-        <div class="card-2">
-          <h3>Accuracy</h3>
-          <div class="card-content">Accuracy</div>
-        </div>
-        <div class="card-2">
-          <h3>Precision</h3>
-          <div class="card-content">Precision</div>
-        </div>
-      </div>
-      <div class="third">
         <div class="btn3"><a href="{{url_for('predict')}}">Go Back</a></div>
       </div>
     </div>
