@@ -51,9 +51,26 @@
           </div>
           {% endfor %}
         </div>
-
+        <div class="divider">↓</div>
         <div class="clean">Prediction</div>
         <div class="card"><div class="sentiment">{{sentiment}}</div></div>
+        <div class="clean">Performance Metrices</div>
+        <div class="card">
+          <h3>Precision</h3>
+          <div class="card-content">{{precision}}</div>
+        </div>
+        <div class="card">
+          <h3>Recall</h3>
+          <div class="card-content">{{recall}}</div>
+        </div>
+        <div class="card">
+          <h3>F1-Score</h3>
+          <div class="card-content">{{f1}}</div>
+        </div>
+        <div class="card">
+          <h3>Accuracy</h3>
+          <div class="card-content">{{accuracy}}</div>
+        </div>
       </div>
 
       <div class="second">

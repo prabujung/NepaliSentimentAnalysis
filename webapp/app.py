@@ -13,6 +13,9 @@ with open("./model/vectorizer.pkl", "rb") as tfidf:
 with open("./model/classifier.pkl", "rb") as classifier:
     mnb = pickle.load(classifier)
 
+with open("./model/metrices.pkl", "rb") as metrices:
+    metrics = pickle.load(metrices)
+
 
 def data_cleaning(string):
     text = re.sub(
@@ -131,6 +134,10 @@ def process(sentence):
             sentence=sentence,
             tf_idf=tf_idf,
             stop_words=stop_words,
+            precision ="%.4f"%metrics[0],
+            recall = "%.4f"%metrics[1],
+            f1 = "%.4f"%metrics[2],
+            accuracy = "%.4f"%metrics[3]
         )
 
 
